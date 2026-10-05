@@ -1,0 +1,27 @@
+{
+  "description": "Capture only user prompts and final responses for the 8x assignment.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .codex/hooks/capture.py",
+            "commandWindows": "py -3 .codex/hooks/capture.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .codex/hooks/capture.py",
+            "commandWindows": "py -3 .codex/hooks/capture.py"
+          }
+        ]
+      }
+    ]
+  }
+}
